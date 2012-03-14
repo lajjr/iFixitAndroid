@@ -20,7 +20,6 @@ public class Guide implements Serializable {
    protected ArrayList<GuideTool> mTools;
    protected ArrayList<GuidePart> mParts;
 
-
    public Guide(int guideid) {
       mGuideid = guideid;
       mSteps = new ArrayList<GuideStep>();
