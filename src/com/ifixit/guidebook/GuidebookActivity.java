@@ -14,6 +14,8 @@ import android.webkit.WebView;
 public class GuidebookActivity extends Activity {
    protected static final String GUIDEID = "guideid";
    protected static final String SPLASH_URL = "http://www.ifixit.com";
+   protected static final String NEW_APP_URL =
+    "market://details?id=com.dozuki.ifixit";
 
    protected WebView mWebView;
 
@@ -55,7 +57,7 @@ public class GuidebookActivity extends Activity {
               new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int id) {
                    Intent intent = new Intent(Intent.ACTION_VIEW);
-                   intent.setData(Uri.parse("market://details?id=com.ifixit.guidebook"));
+                   intent.setData(Uri.parse(NEW_APP_URL));
                    startActivity(intent);
                 }
              })
