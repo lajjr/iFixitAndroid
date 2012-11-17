@@ -220,20 +220,19 @@ public class SiteListActivity extends Activity
          public void onItemClick(AdapterView<?> arg0, View view, int position,
           long id) {
             Site selectedSite = siteListAdapter.getSiteList().get(position);
+            MainApplication app = (MainApplication)getApplication();
+            app.setSite(selectedSite);
 
-            if (selectedSite.mPublic) {
-               // If the site is public then come on in!
+            if (selectedSite.mPublic || app.isUserLoggedIn()) {
                launchSite(selectedSite);
             } else {
-               promptSiteLogin(selectedSite);
+               promptSiteLogin();
             }
          }
       });
    }
 
-   private void promptSiteLogin(Site site) {
-      // Set the site so login will work correctly.
-      ((MainApplication)getApplication()).setSite(site);
+   private void promptSiteLogin() {
       LoginFragment.newInstance().show(getSupportFragmentManager());
    }
 

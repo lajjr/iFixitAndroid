@@ -45,6 +45,7 @@ public class MainApplication extends Application {
 
    public void setSite(Site site) {
       mSite = site;
+      mUser = getUserFromPreferenceFile();
       APIService.setSite(site);
    }
 
@@ -174,6 +175,11 @@ public class MainApplication extends Application {
    }
 
    public User getUserFromPreferenceFile() {
+      if (mSite == null) {
+         mUser = null;
+         return null;
+      }
+
       SharedPreferences preferenceFile = getSharedPreferences(
        PREFERENCE_FILE, MODE_PRIVATE);
       String session = preferenceFile.getString(mSite.mName + SESSION_KEY,
