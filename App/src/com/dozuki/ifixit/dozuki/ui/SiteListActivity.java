@@ -17,6 +17,9 @@ import com.actionbarsherlock.widget.SearchView;
 import com.dozuki.ifixit.MainApplication;
 import com.dozuki.ifixit.R;
 import com.dozuki.ifixit.dozuki.model.Site;
+import com.dozuki.ifixit.login.model.LoginListener;
+import com.dozuki.ifixit.login.model.User;
+import com.dozuki.ifixit.login.ui.LoginFragment;
 import com.dozuki.ifixit.topic_view.ui.TopicsActivity;
 import com.dozuki.ifixit.util.APIEndpoint;
 import com.dozuki.ifixit.util.APIError;
@@ -31,7 +34,7 @@ import org.holoeverywhere.widget.ListView;
 import java.util.ArrayList;
 
 public class SiteListActivity extends Activity
- implements SearchView.OnQueryTextListener {
+ implements SearchView.OnQueryTextListener, LoginListener {
    private static final String SITE_LIST = "SITE_LIST";
 
    private Button mSiteListButton;
@@ -216,17 +219,27 @@ public class SiteListActivity extends Activity
          @Override
          public void onItemClick(AdapterView<?> arg0, View view, int position,
           long id) {
-            MainApplication application = ((MainApplication)getApplication());
-            Intent intent = new Intent(SiteListActivity.this,
-             TopicsActivity.class);
+            Site selectedSite = siteListAdapter.getSiteList().get(position);
 
-            application.setSite(siteListAdapter.getSiteList().get(position));
-            startActivity(intent);
+            if (selectedSite.mPublic) {
+               // If the site is public then come on in!
+               launchSite(selectedSite);
+            } else {
+               promptSiteLogin(selectedSite);
+            }
          }
       });
    }
 
+   private void promptSiteLogin(Site site) {
+      // Set the site so login will work correctly.
+      ((MainApplication)getApplication()).setSite(site);
+      LoginFragment.newInstance().show(getSupportFragmentManager());
+   }
+
    private void getSiteList() {
+      // Make sure we're not on any site anymore.
+      ((MainApplication)getApplication()).setSite(null);
       startService(APIService.getSitesIntent(this));
    }
 
@@ -237,5 +250,43 @@ public class SiteListActivity extends Activity
        // Create and show the dialog.
        DialogFragment siteListFragment = SiteListDialogFragment.newInstance();
        siteListFragment.show(ft);
+   }
+
+   /**
+    * Launches TopicsActivity for the given site.
+    */
+   private void launchSite(Site site) {
+      // The site may already be set.
+      if (site != null) {
+         MainApplication application = ((MainApplication)getApplication());
+         application.setSite(site);
+      }
+
+      Intent intent = new Intent(this, TopicsActivity.class);
+      startActivity(intent);
+   }
+
+   @Override
+   public void onLogin(User user) {
+      /**
+       * Go to the site.
+       *
+       * Note: The current site has already been set before we tried to login.
+       */
+      launchSite(null);
+   }
+
+   @Override
+   public void onCancel() {
+      /**
+       * Do nothing. We just want the dialog to close like it does automatically.
+       */
+   }
+
+   @Override
+   public void onLogout() {
+      /**
+       * Do nothing. We don't care about logouts here.
+       */
    }
 }
