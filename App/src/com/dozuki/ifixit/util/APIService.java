@@ -400,10 +400,8 @@ public class APIService extends Service {
 
                /**
                 * Send the session along in a Cookie.
-                *
-                * TODO: Also send it along if the current site is private.
                 */
-               if (endpoint.mAuthenticated) {
+               if (endpoint.mAuthenticated || (mSite != null && !mSite.mPublic)) {
                   User user = ((MainApplication)getApplicationContext()).getUser();
                   String session = user.getSession();
                   request.header("Cookie", "session=" + session);
