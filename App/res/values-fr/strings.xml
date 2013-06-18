@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-   < !-- Main Application -->
+   <!-- Main Application -->
    <string name="devices">Dispositif</string>
    <string name="topics">Sujets</string>
 
-   < !-- Dozuki Site List -->
+   <!-- Dozuki Site List -->
    <string name="dozuki_search_hint">Rechercher les Sites</string>
    <string name="site_list_button">Explorer les Sites</string>
    <string name="site_list_title">Sélectionner un Site</string>
@@ -15,7 +15,7 @@
    <string name="lock_description">Site Privé</string>
    <string name="empty_site_list">Pas de des sites trouvés.</string>
 
-   < !-- General -->
+   <!-- General -->
    <string name="save">Sauvegarder</string>
    <string name="error">Erreur</string>
    <string name="yes">Oui</string>
@@ -24,7 +24,7 @@
    <string name="confirm_delete_title">Confirmer la Suppression</string>
    <string name="confirm_delete_body">Êtes-vous sûr de vouloir supprimer</string>
 
-   < !-- Error Messages -->
+   <!-- Error Messages -->
    <string name="parse_error_title">Eh bien, c\'est embarrassant</string>
    <string name="parse_error_message">Une erreur s\'est produite en essayant de charger le contenu de nos serveurs.</string>
    <string name="no_connection">Pas de connexion</string>
@@ -38,7 +38,7 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    <string name="media_error_title">Quelque chose s\'est mal passé. Réessayez plus tard.</string>
    <string name="error_confirm">OK</string>
 
-   < !-- Navigation -->
+   <!-- Navigation -->
    <string name="slide_menu_my_guides">Mes Guides</string>
    <string name="slide_menu_search">Chercher</string>
    <string name="slide_menu_browse_content">Navigation du contenu</string>
@@ -56,7 +56,7 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    <string name="slide_menu_help">Aide</string>
    <string name="slide_menu_about">A Propos</string>
 
-   < !-- Log-In / Log-Out -->
+   <!-- Log-In / Log-Out -->
    <string name="username">Nom d\'utilisateur</string>
    <string name="password">Mot de passe</string>
    <string name="login">Connecter</string>
@@ -88,7 +88,7 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    <string name="empty_field_error">Un ou plusieurs domaines sont encore vides.</string>
    <string name="passwords_do_not_match_error">Les mots de passe ne correspondent pas.</string>
 
-   < !-- Gallery -->
+   <!-- Gallery -->
    <string name="media_help_title">Qu\'est-ce que ceci ?</string>
    <string name="media_help_messege">Cette galerie est directement liée à votre compte iFixit. Toutes les photos que vous chargez ici sera à votre disposition pendant votre création de guide. Restez à l\'écoute et vous serez capable de créer des guides n\'importe quand !
    </string>
@@ -109,22 +109,22 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    </string>
    <string name="delete_loading_image_error">Une ou plusieurs images sont toujours en chargement et ne sera pas supprimé sur le serveur</string>
 
-   < !-- Topic List -->
+   <!-- Topic List -->
    <string name="generalInformation">Informations Générales</string>
    <string name="categories">Catégories</string>
 
-   < !-- Topic View -->
+   <!-- Topic View -->
    <string name="guides">Guides</string>
    <string name="answers">Réponses</string>
    <string name="info">Info</string>
 
-   < !-- Guide View Introduction -->
+   <!-- Guide View Introduction -->
    <string name="difficulty">Difficulté</string>
    <string name="author">Auteur</string>
    <string name="requiredTools">Outils Nécessaires</string>
    <string name="requiredParts">Pièces Nécessaires</string>
 
-   < !-- Guide View Steps -->
+   <!-- Guide View Steps -->
    <string name="step">Étape</string>
    <string name="no_guides">Aucun Guide</string>
    <string name="topic_guide_thumbnail">Guide section miniature</string>
@@ -137,7 +137,7 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    <string name="video_activity_progress_title">Attendez s\'il vous plait...</string>
    <string name="video_activity_progress_body">Chargement Video...</string>
 
-   < !-- Guide View Menu -->
+   <!-- Guide View Menu -->
    <string name="guide_edit_text">Modifier</string>
    <string name="guide_share_text">Partager</string>
    <string name="guide_comment_text">Commentaires</string>
@@ -148,10 +148,10 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    <string name="previous">Précédent</string>
    <string name="topic_name_hint">Nom du sujet</string>
 
-   < !-- Full Screen Image -->
+   <!-- Full Screen Image -->
    <string name="close_full_screen_desc">Bouton pour Fermer Plein Écran</string>
 
-   < !-- Guide Edit List -->
+   <!-- Guide Edit List -->
    <string name="publish">Publier</string>
    <string name="published">Publié</string>
    <string name="unpublish">Dépublier</string>
@@ -160,7 +160,7 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    <string name="add_guide">Ajouter Guide</string>
    <string name="no_guides_text">Ajouter guides avec la barre ci-dessus !</string>
 
-   < !-- Guide Steps Edit List -->
+   <!-- Guide Steps Edit List -->
    <string name="step_edit_confirm_delete_title">Supprimer L\'étape</string>
    <string name="step_edit_confirm_delete_message">Etes-vous sûr que vous voulez supprimer</string>
    <string name="edit">Modifier</string>
@@ -169,12 +169,12 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    <string name="reorder_steps">Réorganiser</string>
    <string name="no_steps_text">ajouter des étapes avec la barre ci-dessus !</string>
 
-   < !-- Guide Step Rearrange Dialog -->
+   <!-- Guide Step Rearrange Dialog -->
    <string name="step_rearrange_title">Réorganiser</string>
    <string name="step_rearrange_confirm">Confirmez</string>
    <string name="step_reorder_insufficient_steps">Pas assez d\'étape pour réorganiser.</string>
 
-   < !-- Guide Introduction Edit -->
+   <!-- Guide Introduction Edit -->
    <string name="default_title">Titre par Défaut</string>
    <string name="create_guide_error">Vous devez entrer le type de dispositif !</string>
    <string name="create_guide_header">Créer un guide</string>
@@ -191,7 +191,7 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    <string name="introduction_hint">Décrivez brièvement ce que votre guide enseigne aux gens.</string>
    <string name="guide_type_prompt">Quelle sorte de guide est-ce ?</string>
 
-   < !-- Guide Step Edit -->
+   <!-- Guide Step Edit -->
    <string name="step_delete_dialog_title">Supprimer la Ligne</string>
    <string name="step_delete_dialog_body">Etes-vous sûr de vouloir supprimer cette ligne ?</string>
    <string name="guide_create_help">texte d\'aide</string>
@@ -207,7 +207,7 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    <string name="default_step_title">Étape sans titre</string>
    <string name="step_title_hint">Insérez indication ici.</string>
 
-   < !-- Guide Step Bullet Context Menu -->
+   <!-- Guide Step Bullet Context Menu -->
    <string name="bullet_desc">Marqueur d\'étape du guide</string>
    <string name="bullet_icon_desc">Indication d\'étape, étape importante</string>
    <string name="indent_bullet">indenter le marqueur</string>
@@ -222,7 +222,7 @@ Pour vous assurer que vous ne perdez pas d\'information, s\'il vous plait rechar
    <string name="cancel_reorder_bullets">Annuler le tri</string>
 
 
-   < !-- Miscellaneous -->
+   <!-- Miscellaneous -->
    <string name="topic_background_description">Sujet fond</string>
    <string name="example_guide_item_title">Installation de carte SIM Samsung SGH-E317</string>
    <string name="fist_background_desc">Image fond de poing</string>
